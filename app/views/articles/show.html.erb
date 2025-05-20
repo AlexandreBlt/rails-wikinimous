@@ -1,0 +1,10 @@
+<%= render "header" %>
+<div class="container-fluid w-75 ">
+<h1><%= @article.title %></h1>
+<div class="d-flex flex-row">
+<i class="fa fa-pencil"><%= link_to "edit", edit_article_path(@article)%></i>
+<i class="fa fa-pencil"><%= link_to "delete", @article, data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"}%></i>
+</div>
+<p><%= @article.content %></p>
+</div>
+</div>
